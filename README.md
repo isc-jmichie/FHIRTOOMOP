@@ -19,7 +19,7 @@ click on “Start Trial” and then if you try again after refreshing the page, 
 “Create Deployment” this time.
 
 ### Step 2
-A S3 bucket will be precreated for the workshop. Input properties contain the information of the S3 bucket. Set the Input S3 bucket to arn:aws:s3:::fhiromop, the Input S3 prefix to Transaction/in/${group_id} where you replace ${group_id} accordingly and set the input region to us-east-1. The Target properties allow you to create credentials to connect to the IRIS OMOP database. Create a new password for this deployment. Note that this passwordd is different than the password you use
+A S3 bucket will be precreated for the workshop. Input properties contain the information of the S3 bucket. Set the Input S3 bucket to arn:aws:s3:::fhiromop, the Input S3 prefix to Transaction/in/${group_id} where you replace ${group_id} accordingly and set the input region to us-east-1. The Target properties allow you to create credentials to connect to the IRIS OMOP database. Create a new password for this deployment. Note that this password is different than the password you use
 to login to https://portal.preview.isccloud.io/cloudservices/services. The password
 what we are setting here is for the specific deployment of FHIR to OMOP service we
 will deploy shortly. Do not forget to enable external connections.
