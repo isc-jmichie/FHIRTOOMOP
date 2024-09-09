@@ -114,7 +114,11 @@ The main functionality of this production is to retrieve the output of a Bulk FH
 
 ![image](https://github.com/user-attachments/assets/146cf8ce-a021-44dc-82a9-95e4cad35484)
 
-Go to the S3Upload Operation and under Settings for Cloud Storage, set - StorageRegion: us-east-1 - BucketName: fhiromop and click Apply.
+Go to the S3Upload Operation and under Settings for Cloud Storage, set 
+- StorageRegion: us-east-1
+- BucketName: fhiromop
+
+and click Apply.
 
 Now, under Processes, click on ToS3Upload. Then, on the right (in the Settings tab for this component), look for the BucketSubfolder setting under Basic Settings. Set this to be Transaction/in/${group_id} where group_id should be replaced accordingly (example Transaction/in/g1). Then click apply. Under informational settings, you can click on the looking glass next to the Class Name. This will open the BPL code (a graphical editor) for this business process.
 
@@ -130,7 +134,13 @@ and
 - Setting Name: BaseURL
 - Setting Value: http://${group_id}.isc-ohdsiworkshop.be/irishealth/csp/healthshare/ohdsi/fhir/r4 (the full FHIR URL)
 
-Now go back to the Production. There, you can click on the Orchestrator Process. On the right, under Actions, click on Test button. We will create a Group Bulk FHIR export for all patients who are female and above 18 years old. 
+Now go back to the Production. Click on the RESTBulkFHIR operation and configure it using the following settings:
+- HTTP Server: ${group_id}.isc-ohdsiworkshop.be
+- HTTP Port: 80
+- URL: /irishealth/bulk/r4
+- Credentials: OHDSICredentials
+
+There, you can click on the Orchestrator Process. On the right, under Actions, click on Test button. We will create a Group Bulk FHIR export for all patients who are female and above 18 years old. 
 
 ![image](https://github.com/user-attachments/assets/b9725519-675a-4ff7-9d63-e98d1dfbc351)
 
