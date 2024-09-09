@@ -77,13 +77,7 @@ Additionaly, you can add search parameters to your query. For example, "http://$
 
 Finally, query "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient/${id}/$everything". The $everything operation will return all related resources for a patient in a Bundle. What would be the equivalent tables for these resources in OMOP?
 
-
-
-
-
-
 ## Part 3: Bulk FHIR export
 
-## Part 4: Running OHDSI/Broadsea tools
 
 
