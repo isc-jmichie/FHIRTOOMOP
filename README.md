@@ -122,9 +122,11 @@ Finally, back in the production, click on the service with name BulkFHIRFileServ
 The other components in the production are responsible of orchestrating the Bulk FHIR export. First, go (back in the homepage of the management portal) to Interoperability <- Configure <- System Default Settings. Here, at the settings to be used by the CreateGroup and Orchestrator process. Create two settings by clicking New and setting: 
 - Setting Name: SessionApplication
 - Setting Value: /csp/healthshare/ohdsi/fhir/r4 (the FHIR endpoint)
+
 and
-  - Setting Name: BaseURL
-  - Setting Value: http://${group_id}.isc-ohdsiworkshop.be/irishealth/csp/healthshare/ohdsi/fhir/r4 (the full FHIR URL)
+
+- Setting Name: BaseURL
+- Setting Value: http://${group_id}.isc-ohdsiworkshop.be/irishealth/csp/healthshare/ohdsi/fhir/r4 (the full FHIR URL)
 
 
 
