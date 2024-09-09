@@ -71,9 +71,9 @@ The output should show the different patients being loaded.
 ### Step 5
 We will explore the FHIR server briefly. The FHIR server specification can be found at https://build.fhir.org/http.html. GET and POST statements, for instance, can be used to retrieve resources from the server and post resources on the server respectively.
 
-If you have Postman installed locally, create a new GET request to the FHIR endpoint "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient". Otherwise, you can access the online version of Postman (https://www.postman.com) or use an API client of your choice. Under Authorization, select Basic Authentication and use the credentials used to connect to the IRIS instance. This request will return a Bundle resource containing Patient resources on the FHIR server. 
+If you have Postman installed locally, create a new GET request to the FHIR endpoint "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient". Otherwise, you can access the online version of Postman (https://www.postman.com) or use an API client of your choice. Under Authorization, select Basic Authentication and use the credentials used to connect to the IRIS instance on which the FHIR server is hosted. This request will return a Bundle resource containing Patient resources on the FHIR server. 
 
-Additionaly, you can add search parameters to your query. For example, "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient?gender=male" will return all male patients only. "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient?given=Loyd" should return a patient with given name Loyd. Note the resource id ${id}. Quering "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient/${id}" for the given id return the same patient.
+Additionaly, you can add search parameters to your query. For example, "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient?gender=male" will return all male patients only. "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient?given=Loyd" should return a Patient with given name Loyd. Note the resource id ${id} of the Patient (not of the Bundle itself). Quering "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient/${id}" for the given id return the same patient.
 
 Finally, query "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient/${id}/$everything". The $everything operation will return all related resources for a patient in a Bundle. What would be the equivalent tables for these resources in OMOP?
 
@@ -92,6 +92,14 @@ Under configuration setting, set the name to "BulkFHIRCoordinator" and the BFC e
 Under Authorization types, select the BasicAuth adapter. This enables you to create bulk FHIR exports using your credentials. 
 
 Under Fetch type, select HS.BulkFHIR.Fetch.PureFHIR.Adapter. Select the Endpoint url to be the same as the one for the FHIR server you created in Part 2 (http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4). Set the Authorization type to be HTTP, allowing to connect to the FHIR server using Basic Authentication. Select the HTTP credentials you created in step 1.
+
+Finally, under Storage location, set the file url to be "/bulkfhir/file". This is an endpoint where the Bulk FHIR export files can be retrieved. Make a note of the Directory for later.
+Review your settings and then press configure to set up the Bulk FHIR coordinator.
+
+### Step 3
+
+
+
 
 
 
