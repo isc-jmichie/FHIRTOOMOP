@@ -29,7 +29,7 @@ will deploy shortly. Do not forget to enable external connections.
 ### Step 3
 Under Cloud Options and Deployment name, continue with the default values, then review and create your deployment. 
 Go back to the deployments tab. You can see that your newly created
-deployment is present there. It takes around 15 -20 minutes for the deployment to complete. Until then, the status for the deployment is shown as “Pending”. When the deployment is created, it should show as "Running". While the deployment is being created, you can start with Part 2 of the exercise until you reach step 3 for that part.
+deployment is present there. It takes around 15 -20 minutes for the deployment to complete. Until then, the status for the deployment is shown as “Pending”. When the deployment is created, it should show as "Running". While the deployment is being created, you can start with Part 2 of the exercise until you have completed step 3 for that part.
 
 ### Step 4
 Your deployment should now show as running. Click on the
