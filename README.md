@@ -55,7 +55,7 @@ There, on the left side, select FHIR configuration. This should now show a scree
 
 ### Step 3
 
-Click on add endpoint and select the core FHIR package to be hl7.fhir.r4.core@4.0.1. It should automatically propose the following url: /csp/healthshare/ohdsi/fhir/r4. Create the endpoint with the default settings.
+Click on add endpoint and select the core FHIR package to be hl7.fhir.r4.core@4.0.1. It should automatically propose the following url: /csp/healthshare/ohdsi/fhir/r4. Create the endpoint with the default settings. While the endpoint is created, check back at Part 1 if the FHIR to OMOP deployment is already created and complete step 4 of Part 1.
 
 ![image](https://github.com/user-attachments/assets/898bef78-83f2-4dc7-8155-61a70a37a60a)
 
