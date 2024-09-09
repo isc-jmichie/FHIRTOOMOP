@@ -132,15 +132,15 @@ The other components in the production are responsible of orchestrating the Bulk
 and
 
 - Setting Name: BaseURL
-- Setting Value: http://${group_id}.isc-ohdsiworkshop.be/irishealth/csp/healthshare/ohdsi/fhir/r4 (the full FHIR URL)
+- Setting Value: http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4 (the full FHIR URL)
 
 Now go back to the Production. Click on the RESTBulkFHIR operation and configure it using the following settings:
-- HTTP Server: ${group_id}.isc-ohdsiworkshop.be
+- HTTP Server: ${group_id}.isc-ohdsiworkshop.com
 - HTTP Port: 80
 - URL: /irishealth/bulk/r4
 - Credentials: OHDSICredentials
 
-There, you can click on the Orchestrator Process. On the right, under Actions, click on Test button. We will create a Group Bulk FHIR export for all patients who are female and above 18 years old. 
+Then, you can click on the Orchestrator Process. On the right, under Actions, click on Test button. We will create a Group Bulk FHIR export for all patients who are female and above 18 years old as follows:
 
 ![image](https://github.com/user-attachments/assets/b9725519-675a-4ff7-9d63-e98d1dfbc351)
 
