@@ -77,7 +77,22 @@ Additionaly, you can add search parameters to your query. For example, "http://$
 
 Finally, query "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient/${id}/$everything". The $everything operation will return all related resources for a patient in a Bundle. What would be the equivalent tables for these resources in OMOP?
 
+### Optional: Step 6
+Go to clinfhir.com.
+
 ## Part 3: Bulk FHIR export
+### Step 1
+First, configure the credentials that the Bulk FHIR Coordinator uses to connect to the FHIR Server. In order to do so, go to management portal again (ttp://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/sys/UtilHome.csp). Go to Interoperability <- Configure <- Credentials. There, create a new credential with ID OHDSICredentials and your username and password. Save this credential.
+
+### Step 2
+Go to the Health tab in the management portal again. Now go to Bulk FHIR configuration UI. Create a new configuration by clicking on the blue "New Configuration" and selecting "Create new"
+
+Under configuration setting, set the name to "BulkFHIRCoordinator" and the BFC endpoint to "/bulk/r4". 
+
+Under Authorization types, select the BasicAuth adapter. This enables you to create bulk FHIR exports using your credentials. 
+
+Under Fetch type, select HS.BulkFHIR.Fetch.PureFHIR.Adapter. Select the Endpoint url to be the same as the one for the FHIR server you created in Part 2 (http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4). Set the Authorization type to be HTTP, allowing to connect to the FHIR server using Basic Authentication. Select the HTTP credentials you created in step 1.
+
 
 
 
