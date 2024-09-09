@@ -39,6 +39,19 @@ deployment and login using the deployment password you set up in the step 2. Go 
 
 ## Part 2: FHIR Server installation
 
+### Step 1
+We will start by installing a FHIR server and loading in test data. An IRIS for Health server has been made available on "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/sys/UtilHome.csp" where you should replace your ${group_id} accordingly. Log in using username OHDSIUSER and password ohdsi1009. You are now logged in on the management portal of IRIS for Health. Make sure you are in the OHDSI namespace.
+
+![image](https://github.com/user-attachments/assets/ac675a50-df20-4129-881c-27a2ca57a365)
+
+Go to the health tab in order to configure the FHIR server.
+
+![image](https://github.com/user-attachments/assets/684896d2-227c-4ff4-87d5-9974ecc20150)
+
+
+### Step 2
+You should now have the option to go to 
+
 ## Part 3: Bulk FHIR export
 
 ## Part 4: Running OHDSI/Broadsea tools
