@@ -143,7 +143,7 @@ Now go back to the Production. Click on the RESTBulkFHIR operation and configure
 Then, you can click on the Orchestrator Process. On the right, under Actions, click on Test button. We will create a Group Bulk FHIR export for all patients who are female and above 18 years old as follows:
 
 ![image](https://github.com/user-attachments/assets/b9725519-675a-4ff7-9d63-e98d1dfbc351)
-
+Click on invoke testing service. View the Visual Trace. This contains information on the flow being executed. As a result of this flow, the Bulk FHIR export should be initiated. You can go back to the Bulk FHIR Coordinator UI to view the state of the export. Once the export is done, go to the Production once more and select the Service. Under Messages on the right you can see the Bulk FHIR file being picked up. It should be send to the S3 bucket.
 
 
 
