@@ -66,8 +66,17 @@ Wait for the endpoint to be created. In the next step, we will load synthetic da
 zn "OHDSI"
 do ##class(HS.FHIRServer.Tools.DataLoader).SubmitResourceFiles("C:/Users/Administrator/Documents/fhirout","FHIRServer", "/csp/healthshare/ohdsi/fhir/r4")
 ```
+The output should show the different patients being loaded.
 
 ### Step 5
+We will explore the FHIR server briefly. The FHIR server specification can be found at https://build.fhir.org/http.html. GET and POST statements, for instance, can be used to retrieve resources from the server and post resources on the server respectively.
+
+If you have Postman installed locally, create a new GET request to the FHIR endpoint "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient". Otherwise, you can access the online version of Postman (https://www.postman.com) or use an API client of your choice. Under Authorization, select Basic Authentication and use the credentials used to connect to the IRIS instance. This request will return a Bundle resource containing Patient resources on the FHIR server. 
+
+Additionaly, you can add search parameters to your query. For example, "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient?gender=male" will return all male patients only. "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient?given=Loyd" should return a patient with given name Loyd. Note the resource id ${id}. Quering "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient/${id}" for the given id return the same patient.
+
+Finally, query "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient/${id}/$everything". The $everything operation will return all related resources for a patient in a Bundle. What would be the equivalent tables for these resources in OMOP?
+
 
 
 
