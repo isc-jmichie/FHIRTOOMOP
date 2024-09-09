@@ -105,6 +105,36 @@ Finally, under Storage location, set the file url to be "/bulkfhir/file". This i
 Review your settings and then press configure to set up the Bulk FHIR coordinator.
 
 ### Step 3
+Go back to the homepage of the management portal. There, click on Interoperability <- Configure <- Production. First, click on recover and click ok when prompted. Now, you can go ahead and start the production. 
+
+The main functionality of this production is to retrieve the output of a Bulk FHIR export and post it onto the S3 bucket which will trigger the FHIR to OMOP pipeline configured in Part 1. First, we will add a business operation which is responsible of sending the Bulk FHIR export zip file to the S3 Bucket. Click on the plus symbol next to the operations column. Now add the following configuration: 
+- Operation Class: EnsLib.CloudStorage.BusinessOperation
+- Operation Name: S3Upload
+- Enable Now: true
+
+![image](https://github.com/user-attachments/assets/146cf8ce-a021-44dc-82a9-95e4cad35484)
+
+Now, under Processes, click on ToS3Upload. Then, on the right (in the Settings tab for this component), look for the BucketSubfolder setting under Basic Settings. Set this to be Transaction/in/${group_id} where group_id should be replaced accordingly (example Transaction/in/g1). Then click apply. Under informational settings, you can click on the looking glass next to the Class Name. This will open the BPL code (a graphical editor) for this business process.
+
+Finally, back in the production, click on the service with name BulkFHIRFileService. Under Settings for this component, make sure the File Path equals the one you got from the Bulk FHIR Coordinator set-up in the final part of step 2. Enable the business service and click apply. Don't worry if the Business Service turns red. This is because the folder for the Bulk FHIR export will only be created at the first time of an export.
+
+### Step 4
+The other components in the production are responsible of orchestrating the Bulk FHIR export. First, go (back in the homepage of the management portal) to Interoperability <- Configure <- System Default Settings. Here, at the settings to be used by the CreateGroup and Orchestrator process. Create two settings by clicking New and setting: 
+- Setting Name: SessionApplication
+- Setting Value: /csp/healthshare/ohdsi/fhir/r4 (the FHIR endpoint)
+and
+  - Setting Name: BaseURL
+  - Setting Value: http://${group_id}.isc-ohdsiworkshop.be/irishealth/csp/healthshare/ohdsi/fhir/r4 (the full FHIR URL)
+
+
+
+
+## FHIR to OMOP results
+
+
+
+
+
 
 
 
