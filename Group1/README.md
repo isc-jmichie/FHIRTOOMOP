@@ -75,16 +75,16 @@ We will explore the FHIR server briefly. The FHIR server specification can be fo
 
 If you have Postman installed locally, create a new GET request to the FHIR endpoint "http://g1.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient". Otherwise, you can access the online version of Postman (https://www.postman.com) or use an API client of your choice. Under Authorization, select Basic Authentication and use the credentials used to connect to the IRIS instance on which the FHIR server is hosted. This request will return a Bundle resource containing Patient resources on the FHIR server. 
 
-Additionaly, you can add search parameters to your query. For example, "http://g1.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient?gender=male" will return all male patients only. "http://g1.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient?given=Loyd" should return a Patient with given name Loyd. Note the resource id ${id} of the Patient (not of the Bundle itself). Quering "http://g1.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient/${id}" for the given id return the same patient.
+Additionaly, you can add search parameters to your query. For example, "http://g1.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient?gender=male" will return all male patients only. "http://g1.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient?given=Loyd" should return a Patient with given name Loyd. Note the resource id ${id} of the Patient (not of the Bundle itself). Quering "http://g1.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient/${id}" for the given id returns the same patient.
 
-Finally, query "http://g1.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient/${id}/$everything". The $everything operation will return all related resources for a patient in a Bundle. What would the equivalent tables for these resources be in OMOP?
+Finally, query "http://g1.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient/${id}/$everything". The $everything operation will return all related resources for a patient in a Bundle.
 
 ### Optional: Step 6
 Go to clinfhir.com. ClinFHIR is an open-source tool providing an educational environment and also allows health information technology developers to create or search for Fast Healthcare Interoperability Resources® (FHIR®)-based resources. On the right, add the FHIR server you just created. Give it the name IRISFHIRServer and enter the server url (http://g1.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4). Select the correct FHIR version and select that the server supports the $everything. Add the server. Now click on edit (in the top right corner) and change the data server to the one we just created.
 
 ![image](https://github.com/user-attachments/assets/ba98bd0f-bf0e-45f1-9817-ad18df7bf111)
 
-Now you can open the Patient Viewer (under for Implementers in the left part). Click on Select patient 
+Now you can open the Patient Viewer (under for Implementers in the left part). Click on Select patient and enter the Id for patient Loyd from step 5. Explore the resource associated with this patient.
 
 
 
