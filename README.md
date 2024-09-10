@@ -7,7 +7,7 @@ In Part 1 of the exercise, the cloud solution will be configured.
 The service pulls your Bulk FHIR data from an Amazon S3 bucket and converts it
 into OMOP. A FHIR server will be set up in Part 2, and the bulk FHIR coordinator will be configured so that its output is placed in an S3 bucket in Part 3.
 
-Once converted into OMOP, one can either access the converted data directly from the IRIS database or connect the OHDSI tools (such as Atlas and Hades) to the database, which will be done in Part 4.
+Once converted into OMOP, one can either access the converted data directly from the IRIS database which will be done in Part 4, or connect the OHDSI tools (such as Atlas and Hades) to the database.
 
 ## Part 1: Configuring the FHIR to OMOP cloud solution
 ### Step 1
