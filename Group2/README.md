@@ -19,7 +19,7 @@ click on “Start Trial” and then if you try again after refreshing the page, 
 “Create Deployment” this time.
 
 ### Step 2
-A S3 bucket will be precreated for the workshop. Input properties contain the information of the S3 bucket. Set the Input S3 bucket to arn:aws:s3:::fhiromop, the Input S3 prefix to Transaction/in/g2 where you replace g2 accordingly and set the input region to us-east-1. The Target properties allow you to create credentials to connect to the IRIS OMOP database. Create a new password for this deployment. Note that this password is different than the password you use
+A S3 bucket will be precreated for the workshop. Input properties contain the information of the S3 bucket. Set the Input S3 bucket to arn:aws:s3:::fhiromop, the Input S3 prefix to Transaction/in/g2 and set the input region to us-east-1. The Target properties allow you to create credentials to connect to the IRIS OMOP database. Create a new password for this deployment. Note that this password is different than the password you use
 to login to https://portal.preview.isccloud.io/cloudservices/services. The password
 what we are setting here is for the specific deployment of FHIR to OMOP service we
 will deploy shortly. Do not forget to enable external connections.
@@ -40,7 +40,7 @@ deployment and login using the deployment password you set up in the step 2. Go 
 ## Part 2: FHIR Server installation
 
 ### Step 1
-We will start by installing a FHIR server and loading in test data. An IRIS for Health server has been made available on "http://g2.isc-ohdsiworkshop.com/irishealth/csp/sys/UtilHome.csp" where you should replace your g2 accordingly. Log in using username OHDSIUSER and password ohdsi1009. You are now logged in on the management portal of IRIS for Health. Make sure you are in the OHDSI namespace. If not, on the top click on the namespace specified next to namespace in order to switch.
+We will start by installing a FHIR server and loading in test data. An IRIS for Health server has been made available on "http://g2.isc-ohdsiworkshop.com/irishealth/csp/sys/UtilHome.csp". Log in using username OHDSIUSER and password ohdsi1009. You are now logged in on the management portal of IRIS for Health. Make sure you are in the OHDSI namespace. If not, on the top click on the namespace specified next to namespace in order to switch.
 
 Go to the health tab in order to configure the FHIR server.
 
@@ -120,7 +120,7 @@ Go to the S3Upload Operation and under Settings for Cloud Storage, set
 
 and click Apply.
 
-Now, under Processes, click on ToS3Upload. Then, on the right (in the Settings tab for this component), look for the BucketSubfolder setting under Basic Settings. Set this to be Transaction/in/g2/ where group_id should be replaced accordingly (example Transaction/in/g1/). Then click apply. Please note the final slash is required. Under informational settings, you can click on the looking glass next to the Class Name. This will open the BPL code (a graphical editor) for this business process.
+Now, under Processes, click on ToS3Upload. Then, on the right (in the Settings tab for this component), look for the BucketSubfolder setting under Basic Settings. Set this to be Transaction/in/g2/ . Then click apply. Please note the final slash is required. Under informational settings, you can click on the looking glass next to the Class Name. This will open the BPL code (a graphical editor) for this business process.
 
 Finally, back in the production, click on the service with name BulkFHIRFileService. Under Settings for this component, make sure the File Path equals the one you got from the Bulk FHIR Coordinator set-up in the final part of step 2. Enable the business service and click apply. Don't worry if the Business Service turns red. This is because the folder for the Bulk FHIR export will only be created at the first time of an export.
 
