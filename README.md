@@ -71,7 +71,7 @@ do ##class(HS.FHIRServer.Tools.DataLoader).SubmitResourceFiles("C:/Users/Adminis
 The output should show the different patients being loaded.
 
 ### Step 5
-We will explore the FHIR server briefly. The FHIR server specification can be found at https://build.fhir.org/http.html. GET and POST statements, for instance, can be used to retrieve resources from the server and post resources on the server respectively.
+We will explore the FHIR server briefly. The FHIR server specification can be found at https://www.hl7.org/fhir/http.html. GET and POST statements, for instance, can be used to retrieve resources from the server and post resources on the server respectively. Resource definitions can be found on the same website as the server specification (for example for the Patient resource: https://www.hl7.org/fhir/patient.html).
 
 If you have Postman installed locally, create a new GET request to the FHIR endpoint "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient". Otherwise, you can access the online version of Postman (https://www.postman.com) or use an API client of your choice. Under Authorization, select Basic Authentication and use the credentials used to connect to the IRIS instance on which the FHIR server is hosted. This request will return a Bundle resource containing Patient resources on the FHIR server. 
 
