@@ -120,7 +120,7 @@ Go to the S3Upload Operation and under Settings for Cloud Storage, set
 
 and click Apply.
 
-Now, under Processes, click on ToS3Upload. Then, on the right (in the Settings tab for this component), look for the BucketSubfolder setting under Basic Settings. Set this to be Transaction/in/${group_id} where group_id should be replaced accordingly (example Transaction/in/g1). Then click apply. Under informational settings, you can click on the looking glass next to the Class Name. This will open the BPL code (a graphical editor) for this business process.
+Now, under Processes, click on ToS3Upload. Then, on the right (in the Settings tab for this component), look for the BucketSubfolder setting under Basic Settings. Set this to be Transaction/in/${group_id}/ where group_id should be replaced accordingly (example Transaction/in/g1/). Then click apply. Please note the final slash is required. Under informational settings, you can click on the looking glass next to the Class Name. This will open the BPL code (a graphical editor) for this business process.
 
 Finally, back in the production, click on the service with name BulkFHIRFileService. Under Settings for this component, make sure the File Path equals the one you got from the Bulk FHIR Coordinator set-up in the final part of step 2. Enable the business service and click apply. Don't worry if the Business Service turns red. This is because the folder for the Bulk FHIR export will only be created at the first time of an export.
 
