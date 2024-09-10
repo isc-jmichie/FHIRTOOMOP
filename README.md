@@ -33,7 +33,7 @@ deployment is present there. It takes around 15 -20 minutes for the deployment t
 
 ### Step 4
 Your deployment should now show as running. Click on the
-deployment and login using the deployment password you set up in the step 2. Go to configurations and copy the S3 bucket policy. In order to allow the FHIR to OMOP solution to access the S3 bucket, this policy should be added to the policies of the S3 bucket. As in this, workshop you won't have access to the S3 bucket directly, please mail the copied S3 bucket policy to jelle.michiels@intersystems.com. The bucket policy will be added to the S3 bucket for you. After this is done, continue with part 2. At the end of part 3, a bulk FHIR should be placed in the S3 bucket and be picked up by the FHIR to OMOP pipeline, after which we will come back to the cloud portal to view the results.
+deployment and login using the deployment password you set up in the step 2. Go to configurations and copy the S3 bucket policy. In order to allow the FHIR to OMOP solution to access the S3 bucket, this policy should be added to the policies of the S3 bucket. As in this workshop you won't have access to the S3 bucket directly, please mail the copied S3 bucket policy to jelle.michiels@intersystems.com. The bucket policy will be added to the S3 bucket for you. After this is done, continue with part 2. At the end of part 3, a bulk FHIR should be placed in the S3 bucket and be picked up by the FHIR to OMOP pipeline, after which we will come back to the cloud portal to view the results.
 
 ![image](https://github.com/user-attachments/assets/fc05b3ab-ca63-46c0-9145-b2df8e506c8d)
 
