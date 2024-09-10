@@ -84,7 +84,7 @@ Go to clinfhir.com. ClinFHIR is an open-source tool providing an educational env
 
 ![image](https://github.com/user-attachments/assets/ba98bd0f-bf0e-45f1-9817-ad18df7bf111)
 
-Now you can open the Patient Viewer (under for Implementers in the left part). Click on Select patient 
+Now you can open the Patient Viewer (under for Implementers in the left part). Click on Select patient and enter the Id for patient Loyd from step 5. Explore the resource associated with this patient.
 
 
 
