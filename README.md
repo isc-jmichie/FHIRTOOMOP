@@ -90,7 +90,7 @@ Now you can open the Patient Viewer (under for Implementers in the left part). C
 
 ## Part 3: Bulk FHIR export
 ### Step 1
-First, configure the credentials that the Bulk FHIR Coordinator uses to connect to the FHIR Server. In order to do so, go to management portal again (ttp://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/sys/UtilHome.csp). Go to Interoperability <- Configure <- Credentials. There, create a new credential with ID OHDSICredentials and your username and password (OHDSIUSER and ohdsi1009). Save this credential.
+First, configure the credentials that the Bulk FHIR Coordinator uses to connect to the FHIR Server. In order to do so, go to management portal again (http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/sys/UtilHome.csp). Go to Interoperability <- Configure <- Credentials. There, create a new credential with ID OHDSICredentials and your username and password (OHDSIUSER and ohdsi1009). Save this credential.
 
 ### Step 2
 Go to the Health tab in the management portal again. Now go to Bulk FHIR Coordinator UI. Create a new configuration by clicking on the blue "New Configuration" and selecting "Create new"
@@ -150,6 +150,13 @@ Click on invoke testing service. View the Visual Trace. This contains informatio
 
 ## FHIR to OMOP results
 
+Go back to the FHIR to OMOP Cloud deployment (the cloud portal from Part 1). Go to the metrics for the deployment. This gives an overview of the quality of the mapping. Resolving the errors or warning by adding custom terminology mappings to the deployment will be available in the general availability release and was shown before lunch.
+
+In the SQL Query Tools, explore the OMOP data by executing some simple SQL statements. For example, to get a view of all the persons in the OMOP CDM:
+```SQL
+SELECT * FROM OMOPCDM54.Person
+```
+Confirm these are the ones as expected by executing GET http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient?gender=female&birthdate=lt2006-09-07 in Postman (or you API clinet).
 
 
 
