@@ -77,7 +77,7 @@ If you have Postman installed locally, create a new GET request to the FHIR endp
 
 Additionaly, you can add search parameters to your query. For example, "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient?gender=male" will return all male patients only. "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient?given=Loyd" should return a Patient with given name Loyd. Note the resource id ${id} of the Patient (not of the Bundle itself). Quering "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient/${id}" for the given id return the same patient.
 
-Finally, query "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient/${id}/$everything". The $everything operation will return all related resources for a patient in a Bundle. What would be the equivalent tables for these resources in OMOP?
+Finally, query "http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4/Patient/${id}/$everything". The $everything operation will return all related resources for a patient in a Bundle. What would the equivalent tables for these resources be in OMOP?
 
 ### Optional: Step 6
 Go to clinfhir.com. ClinFHIR is an open-source tool providing an educational environment and also allows health information technology developers to create or search for Fast Healthcare Interoperability Resources® (FHIR®)-based resources. On the right, add the FHIR server you just created. Give it the name IRISFHIRServer and enter the server url (http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/healthshare/ohdsi/fhir/r4). Select the correct FHIR version and select that the server supports the $everything. Add the server. Now click on edit (in the top right corner) and change the data server to the one we just created.
@@ -93,7 +93,7 @@ Now you can open the Patient Viewer (under for Implementers in the left part). C
 First, configure the credentials that the Bulk FHIR Coordinator uses to connect to the FHIR Server. In order to do so, go to management portal again (http://${group_id}.isc-ohdsiworkshop.com/irishealth/csp/sys/UtilHome.csp). Go to Interoperability <- Configure <- Credentials. There, create a new credential with ID OHDSICredentials and your username and password (OHDSIUSER and ohdsi1009). Save this credential.
 
 ### Step 2
-Go to the Health tab in the management portal again. Now go to Bulk FHIR Coordinator UI. Create a new configuration by clicking on the blue "New Configuration" and selecting "Create new"
+Go to the Health tab in the management portal again. Now go to Bulk FHIR Coordinator UI. Create a new configuration by clicking on the blue "New Configuration" and selecting "Create new".
 
 Under configuration setting, set the name to "BulkFHIRCoordinator" and the BFC endpoint to "/bulk/r4". 
 
